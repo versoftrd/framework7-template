@@ -1,0 +1,23 @@
+.page-welcome-client {
+    background: var(--core-main-theme);
+    color: var(--core-alternate-theme-color);
+}
+
+.swiper-main {
+    height: 100%;
+}
+
+.welcome-block {
+    font-size: 2rem;
+    color: var(--core-alternate-theme-dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    text-align: center;
+}
+
+
+.page-welcome-client img.welcome-logo {
+    width: 10rem;
+}

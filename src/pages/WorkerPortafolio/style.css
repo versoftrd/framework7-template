@@ -1,0 +1,17 @@
+.portafolio-hidden-block {
+    display: none;
+}
+.portafolio-empty {
+    display: block;
+    text-align: center;
+    margin: 2rem 0 0.2rem 0;
+    font-size: 1.1rem;
+}
+.portafolio-empty p {
+    margin-bottom: 1rem;
+}
+
+.portafolio-empty i {
+    font-size: 2rem;
+    margin-top: 2rem;
+}

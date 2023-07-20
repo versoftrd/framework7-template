@@ -1,0 +1,27 @@
+<template>
+  <div class="popup routable-popup-${props.name}">
+    <div class="content-block-login">
+      <h4>¿Qué estás buscando?</h4>
+      <div class="loginform">
+        <div class="signup_social">
+          <a href="#" class="button-inline-left">SERVICIOS PARA CONTRATAR</a>
+          <a href="#" class="button-inline-right">OFRECER MIS SERVICIOS</a>
+        </div>
+        <div class="close_loginpopup_button">
+          <a href="#" class="link close-popup" @click=${PageCode.events.closePopup}>
+            <img src="${RESOURCE_PATH}images/icons/white/menu_close.png" alt="" title="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import Page from './page-code.js';
+  import './style.css';
+  export default (props, framework) => {
+    const RESOURCE_PATH = "/assets/";
+    const PageCode = Page(props, framework, $render);
+    return PageCode.render;
+  }
+</script>

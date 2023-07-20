@@ -1,0 +1,14 @@
+<template>
+  <div class="page" data-name="page-name">
+    <div class="page-content">
+
+    </div>
+  </div>
+</template>
+<script>
+  import Page from './page-code.js';
+  export default (props, framework) => {
+    const PageCode = Page(props, framework, $render);
+    return PageCode.render;
+  }
+</script>

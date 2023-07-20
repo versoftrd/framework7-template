@@ -1,0 +1,68 @@
+<template>
+  <div class="page page-welcome-client" data-name="page-welcome-client">
+    <div class="page-content">
+      <swiper-container pagination class="swiper-main" space-between="50">
+        <!-- <swiper-slide>
+          <div class="welcome-block">
+            <div><img class="welcome-logo" src="/assets/images/posicionaterd/logo-black.png" alt="Welcome" /></div>
+          </div>
+          <div class="welcome-block">
+            <span>Bienvenido a <strong>Posicionaterd</strong></span>
+          </div>
+          <div class="welcome-block">
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="welcome-block">
+          </div>
+          <div class="welcome-block">
+            <span>Mensaje <strong>#2</strong></span>
+          </div>
+          <div class="welcome-block">
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="welcome-block">
+          </div>
+          <div class="welcome-block">
+            <span>Mensaje <strong>#3</strong></span>
+          </div>
+          <div class="welcome-block">
+          </div>
+        </swiper-slide> -->
+        ${
+        PageCode.values.messages.map( (message) => $h`
+        <swiper-slide>
+          <div class="welcome-block">
+            ${message.showLogo && $h`
+            <div><img class="welcome-logo" src="/assets/images/posicionaterd/logo-black.png" alt="Welcome" /></div>
+            `}
+          </div>
+          <div class="welcome-block">
+            ${message.isHtml ? $h`
+            <span innerHTML="${message.body}"></span>
+            ` : $h`
+            <span>${message.body}</span>
+            `}
+          </div>
+          <div class="welcome-block">
+            ${message.continueButton && $h`
+            <button class="main-button-light"
+              @click="${PageCode.events.continueButton}">${message.buttonMessage}</button>
+            `}
+          </div>
+        </swiper-slide>
+        `)
+        }
+      </swiper-container>
+    </div>
+  </div>
+</template>
+<script>
+  import Page from './page-code.js';
+  import './style.css';
+  export default (props, framework) => {
+    const PageCode = Page(props, framework, $render);
+    return PageCode.render;
+  }
+</script>

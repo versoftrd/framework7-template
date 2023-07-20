@@ -1,0 +1,54 @@
+<template>
+  <div class="page page-with-subnavbar" data-name="page-worker-profile-picture">
+    <nav-top title="Imagen de perfil"></nav-top>
+    <toolbar-icons items="${PageCode.toolbar.value}" @onclick="${PageCode.events.toolbarOnClick}"></toolbar-icons>
+    <div class="page-content">
+      <div class="portafolioForm">
+        <div class="form_row">
+          <image-input id="profile-image" buttonclass="" @newImageEvent="${PageCode.events.addProfileImage}">
+          </image-input>
+          <image-input id="front-image" buttonclass="" @newImageEvent="${PageCode.events.addFrontImage}">
+          </image-input>
+          <div class="card">
+            <div class="card-header">${PageCode.values.currentUser.displayName}</div>
+            <div class="card-content card-content-padding">
+              <img src="${PageCode.values.currentUser.photoURL}" alt="Profile" />
+            </div>
+          </div>
+          ${values.portafolio.length > 0 ? $h`
+          <h2 class="page_title">Imagen de portada</h2>
+          <div class="block-title">Styled Cards</div>
+          <div class="card card-outline-md">
+            <div style="background-image:url(https://cdn.framework7.io/placeholder/nature-1000x600-3.jpg)"
+              valign="bottom" class="card-header">Journey To Mountains</div>
+            <div class="card-content card-content-padding">
+            </div>
+          </div>
+          ` : $h`
+          <div class="portafolio-empty">
+            <p class="alternate-color">Aun no tienes una imagen de portada</p>
+            <p><a href="#"><i class="material-icons-outlined main-color"
+                  @click="${PageCode.events.addImage}">add_photo_alternate</i></a></p>
+          </div>
+          `}
+
+          ${PageCode.values.loadRetryBlock.value && $h`
+          <div class="portafolio-empty">
+            <p class="alternate-color">No logramos obtener las imágenes en este momento</p>
+            <p><a href="#"><i class="material-icons-outlined main-color"
+                  @click="${PageCode.events.getImages}">refresh</i> Intentar de nuevo</a></p>
+          </div>
+          `}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import Page from './page-code.js';
+  import './style.css';
+  export default (props, framework) => {
+    const PageCode = Page(props, framework, $render);
+    return PageCode.render;
+  }
+</script>

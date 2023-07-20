@@ -1,0 +1,50 @@
+<template>
+  <div class="page homepage" data-name="page-home">
+    <div class="page-content">
+      <div class="logo">
+        <img src="/assets/images/Posicionaterd/logo-yellow.png" width="30%" title="Logo" />
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <list-square-item url="/settings/" icon="settings" xclass="alternate-dark-color" text="Configuración"
+            textcolor="alternate-dark-color" bgcolor="main-bg-color"></list-square-item>
+          <list-square-item url="#" icon="menu" xclass="alternate-dark-color" text="Menú"
+            textcolor="alternate-dark-color" bgcolor="main-bg-color" panel=".panel-right"></list-square-item>
+
+          ${!values.currentUser.isRoleClient && $h`
+          <list-square-item url="/worker-portafolio/" icon="collections" xclass="main-color" text="Mi portafolio"
+            textcolor="" bgcolor=""></list-square-item>
+          <list-square-item url="/worker-profile-picture/" icon="portrait" xclass="main-color" text="Foto de perfil"
+            textcolor="" bgcolor=""></list-square-item>
+          <list-square-item url="/worker-contact-detail/" icon="portrait" xclass="main-color" text="Datos de contacto"
+            textcolor="" bgcolor=""></list-square-item>
+          <list-square-item url="/worker-social-media/" icon="workspaces" xclass="main-color" text="Redes sociales"
+            textcolor="" bgcolor=""></list-square-item>
+          `}
+          ${values.currentUser.isRoleClient && $h`
+          ${categories.map((element) => $h`
+          <list-square-item url="/list-workers/${element.id}" icon="${element.icon}" xclass="main-color"
+            text="${element.name}" textcolor="" bgcolor=""></list-square-item>
+          `)}
+          `}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</template>
+<script>
+  import './style.css';
+  import Page from './page-code.js';
+  import Nav from '/layouts/Nav/index.f7.jsx';
+  import { categories } from '/data/index.js';
+  export default (props, framework) => {
+    const RESOURCE_PATH = "/assets/";
+    let values = {
+      currentUser: {
+        isRoleClient: true
+      }
+    }
+    return Page(props, framework, $render, values);
+  }
+</script>

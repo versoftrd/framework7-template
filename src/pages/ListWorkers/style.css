@@ -1,0 +1,38 @@
+ul.features_list_detailed > li span {
+    bottom:0px; 
+    right:0px; 
+    opacity:1;
+}
+
+ul.features_list_detailed > li h4 {
+    right:0px !important; 
+    opacity:1;
+}
+
+ul.features_list_detailed > li div.feat_small_icon {
+    left:0px; 
+    opacity:1;
+}
+
+.image-border-normal img {
+    border: 2px solid var(--core-main-theme)
+}
+
+.image-border-featured img {
+    border: 2px solid #f6f6f6;
+}
+
+.star-color-featured {
+    color: #f6f6f6;
+}
+
+.worker-list-rating {
+    display: flex;
+    align-items: center;
+    justify-content: star;
+}
+
+.worker-list-rating span {
+    margin-top: 5px;
+    margin-left: 5px;
+}

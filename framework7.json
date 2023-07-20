@@ -1,0 +1,25 @@
+{
+  "cwd": "D:\\Versoft\\Git-Projects\\posicionaterd",
+  "type": [
+    "capacitor"
+  ],
+  "name": "Posicionaterd",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": true,
+    "color": "#fee600",
+    "darkMode": true,
+    "iconFonts": true
+  },
+  "customBuild": false,
+  "pkg": "io.framework7.myapp",
+  "capacitor": {
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+.list-icon {
+    font-size: 7rem;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .list-icon {
+        font-size: 3rem;
+        max-width: 30%;
+    }
+}

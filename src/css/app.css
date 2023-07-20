@@ -1,0 +1,102 @@
+/* Your app custom styles here */
+:root {
+    --core-main-theme: #fee600;
+    --core-alternate-theme-color: #FFF;
+    --core-alternate-theme-dark-color: #000;
+    --core-button-left-color: var(--core-main-theme);
+    --core-button-left-text-color: #000;
+    --core-button-right-color: #FFF;
+    --core-button-right-text-color: #000;
+
+    /*Framework7 Overrides Variables*/
+    --swiper-pagination-color: var(--core-alternate-theme-dark-color);
+}
+
+.main-color {
+    color: var(--core-main-theme);
+}
+
+.main-bg-color {
+    background: var(--core-main-theme) !important;
+}
+
+.alternate-color {
+    color: var(--core-alternate-theme-color);
+}
+
+.alternate-dark-color {
+    color: var(--core-alternate-theme-dark-color);
+}
+
+.list .item-title {
+    color: #FFF;
+}
+
+.page-content {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.page-content > h4{
+    margin-top: 1.5;
+    color: #FFF;
+}
+
+.input-invalid {
+    border-color: red !important; 
+}
+
+.page-loader {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-large {
+    width: 42px;
+    height: 42px;
+}
+
+.main-button-light {
+    width:100%;
+    padding:4% 0 4% 0; 
+    margin:10px 0 0 0; 
+    font-weight:normal;
+    text-align:center;
+    cursor:pointer; 
+    font-size:20px;
+    color:#FFFFFF;
+    -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+    border: none;
+    cursor:pointer;
+    -webkit-appearance: none;    
+    background-color: var(--core-alternate-theme-dark-color); 
+}
+
+.main-button-dark {
+    width:100%;
+    padding:4% 0 4% 0; 
+    margin:10px 0 0 0; 
+    font-weight:normal;
+    text-align:center;
+    cursor:pointer; 
+    font-size: 1.3rem;
+    color:var(--core-alternate-theme-dark-color); 
+    -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+    border: none;
+    cursor:pointer;
+    -webkit-appearance: none;    
+    background-color: var(--core-main-theme)
+}
+
+.main-button-with-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.main-button-with-icons i {
+    font-size: 1.3rem;
+}
