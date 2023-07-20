@@ -1,6 +1,6 @@
 {
-  "appId": "io.posicionate.rd",
-  "appName": "Posicionaterd",
+  "appId": "io.appname.rd",
+  "appName": "AppName",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

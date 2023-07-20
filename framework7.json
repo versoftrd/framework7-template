@@ -1,9 +1,9 @@
 {
-  "cwd": "D:\\Versoft\\Git-Projects\\posicionaterd",
+  "cwd": "D:\\",
   "type": [
     "capacitor"
   ],
-  "name": "Posicionaterd",
+  "name": "AppName",
   "framework": "core",
   "template": "single-view",
   "bundler": "vite",

@@ -1,55 +1,25 @@
-# Posicionaterd
-
-## Framework7 CLI Options
-
-Framework7 app created with following options:
-
-```
-{
-  "cwd": "D:\\Versoft\\Git-Projects\\posicionaterd",
-  "type": [
-    "capacitor"
-  ],
-  "name": "Posicionaterd",
-  "framework": "core",
-  "template": "single-view",
-  "bundler": "vite",
-  "cssPreProcessor": false,
-  "theming": {
-    "customColor": true,
-    "color": "#fee600",
-    "darkMode": true,
-    "iconFonts": true
-  },
-  "customBuild": false,
-  "pkg": "io.framework7.myapp",
-  "capacitor": {
-    "platforms": [
-      "ios",
-      "android"
-    ]
-  }
-}
-```
+# AppName
 
 ## Install Dependencies
 
 First of all we need to install dependencies, run in terminal
+
 ```
 npm install
 ```
 
 ## NPM Scripts
 
-* 🔥 `start` - run development server
-* 🔧 `dev` - run development server
-* 🔧 `build` - build web app for production
-* 📱 `build-capacitor-ios` - build app and copy it to iOS capacitor project
-* 📱 `build-capacitor-android` - build app and copy it to Android capacitor project
+- 🔥 `start` - run development server
+- 🔧 `dev` - run development server
+- 🔧 `build` - build web app for production
+- 📱 `build-capacitor-ios` - build app and copy it to iOS capacitor project
+- 📱 `build-capacitor-android` - build app and copy it to Android capacitor project
 
 ## Vite
 
 There is a [Vite](https://vitejs.dev) bundler setup. It compiles and bundles all "front-end" resources. You should work only with files located in `/src` folder. Vite config located in `vite.config.js`.
+
 ## Capacitor
 
 This project created with Capacitor support. And first thing required before start is to add capacitor platforms, run in terminal:
@@ -76,7 +46,8 @@ framework7 assets --ui
 
 ## Capacitor Assets
 
-Capacitor assets are located in `resources` folder which is intended to be used with `cordova-res` tool. To generate  mobile apps assets run in terminal:
+Capacitor assets are located in `resources` folder which is intended to be used with `cordova-res` tool. To generate mobile apps assets run in terminal:
+
 ```
 npx cordova-res
 ```
@@ -85,15 +56,14 @@ Check out [official cordova-res documentation](https://github.com/ionic-team/cor
 
 ## Documentation & Resources
 
-* [Framework7 Core Documentation](https://framework7.io/docs/)
+- [Framework7 Core Documentation](https://framework7.io/docs/)
 
-
-
-* [Framework7 Icons Reference](https://framework7.io/icons/)
-* [Community Forum](https://forum.framework7.io)
+- [Framework7 Icons Reference](https://framework7.io/icons/)
+- [Community Forum](https://forum.framework7.io)
 
 ## Support Framework7
 
 Love Framework7? Support project by donating or pledging on:
+
 - Patreon: https://patreon.com/framework7
 - OpenCollective: https://opencollective.com/framework7

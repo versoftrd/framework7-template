@@ -1,8 +1,8 @@
 {
-  "name": "posicionaterd",
+  "name": "appname",
   "private": true,
   "version": "1.0.0",
-  "description": "Posicionaterd",
+  "description": "AppName",
   "repository": "",
   "license": "UNLICENSED",
   "scripts": {
