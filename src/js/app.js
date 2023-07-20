@@ -5,8 +5,7 @@ import Framework7, { getDevice } from "framework7/bundle";
 import "framework7/css/bundle";
 
 //Import theme css
-import "../css/theme/style.css";
-import "../css/theme/yellow.css";
+//import "../css/theme/style.css";
 
 // Import Icons and App Custom Styles
 import "../css/icons.css";
@@ -25,7 +24,7 @@ import App from "../app.f7";
 
 var device = getDevice();
 var app = new Framework7({
-  name: "Posicionaterd", // App name
+  name: "AppName", // App name
   theme: "auto", // Automatic theme detection
   colors: {
     primary: "#fee600",
@@ -62,9 +61,6 @@ var app = new Framework7({
 //Common components
 import ListSquareItem from "/components/ListSquareItem/index.f7.jsx";
 Framework7.registerComponent("list-square-item", ListSquareItem);
-
-import ListWorkerItem from "/components/ListWorkerItem/index.f7.jsx";
-Framework7.registerComponent("list-worker-item", ListWorkerItem);
 
 import Nav from "/layouts/Nav/index.f7.jsx";
 Framework7.registerComponent("nav-top", Nav);
